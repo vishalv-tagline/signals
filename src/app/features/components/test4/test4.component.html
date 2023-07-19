@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-lg-6">
+        <table class="table table-striped">
+            <thead class="table table-dark">
+                <tr>
+                    <th>Rno</th>
+                    <th>First name</th>
+                    <th>last name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of studentsData()">
+                    <td>{{data?.rno}}</td>
+                    <td>{{data?.first_name}}</td>
+                    <td>{{data?.last_name}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-6">
+        <form class="row" [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+            <h5>Student Registration</h5><hr>
+            <div class="col-lg-12">
+                <label for="" class="form-label">Rno</label>
+                <input type="number" class="form-control" placeholder="Enter rno" formControlName="rno" name="" id="">
+            </div>
+            <div class="col-lg-6 mt-3">
+                <label for="" class="form-label">First name</label>
+                <input type="text" class="form-control" placeholder="Enter first name" name="" id="" formControlName="first_name">
+            </div>
+            <div class="col-lg-6 mt-3">
+                <label for="" class="form-label">Last name</label>
+                <input type="text" class="form-control" placeholder="Enter last name" name="" id="" formControlName="last_name">
+            </div>
+            <div class="mt-3">
+                <button class="btn btn-outline-primary" type="submit">Add Student</button>
+            </div>
+        </form>
+    </div>
+</div>

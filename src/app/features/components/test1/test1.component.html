@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <h3 class="h3 text-primary">Example-1 :- Normal Property</h3>
+  <hr />
+  <div class="row">
+    <div class="col-lg-4">
+      <h5 class="h5 fw-bold">First name</h5>
+      <hr />
+      <h6>{{ firstName }}</h6>
+    </div>
+    <div class="col-lg-4">
+      <h5 class="h5 fw-bold">Last name</h5>
+      <hr />
+      <h6>{{ lastName }}</h6>
+    </div>
+    <div class="col-lg-4">
+      <h5 class="h5 fw-bold">Full name</h5>
+      <hr />
+      <h6 class="h6 text-success">{{ fullName }}</h6>
+    </div>
+  </div>
+  <hr />
+  <div class="mt-2">
+    <div class="row">
+        <div class="col-6">
+            <div class="d-flex justify-content-between">
+                <input type="text" class="form-control mx-2" #fname [value]="firstName" placeholder="Enter first name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-primary" type="button" id="button-addon2" (click)="onChangeFirstName(fname.value)">Change</button>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="d-flex justify-content-between">
+                <input type="text" class="form-control mx-2" #lname [value]="lastName" placeholder="Enter last name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-primary" type="button" id="button-addon2" (click)="onChangeLastName(lname.value)">Change</button>
+            </div>
+        </div>
+      </div>
+    </div><hr>
+    <h3 class="h3 text-success">Example-2 :- Set & Computed</h3>
+    <hr />
+    <app-test2></app-test2><hr>
+    <h3 class="h3 text-success">Example-3 :- Update</h3>
+    <hr />
+    <app-test3></app-test3><hr>
+    <h3 class="h3 text-success">Example-4 :- Mutate</h3>
+    <hr />
+    <app-test4></app-test4><hr>
+</div>
+
